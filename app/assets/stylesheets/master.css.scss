@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -23,5 +25,12 @@ body {
 .navbar.navbar-inverse {
 	background: url('/assets/debut_dark.png');
 	border-radius: 0;
-	box-shadow: 0px 6px 10px #2a2a2a;
+	box-shadow: 0px 5px 9px #2a2a2a;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #FF5D5C;
+	font-family: 'Lobster', cursive;
+	letter-spacing: 1px;
+	font-size: 42px;
 }
