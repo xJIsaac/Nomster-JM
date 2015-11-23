@@ -36,6 +36,8 @@ function initMap() {
 
 	<div class="pull-right">
 	<% if current_user && current_user == @place.user %>
+    <!-- Button trigger modal "Add a photo" -->
+    <button class="btn btn-primary" data-toggle="modal" data-target="#Photos">Add a photo</button>
 		<%= link_to 'Edit', edit_place_path(@place), :class => 'btn btn-primary' %>
 		<%= link_to 'Destroy', place_path(@place), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'},:class => 'btn btn-danger' %>
 	<% end %>
@@ -45,8 +47,18 @@ function initMap() {
 <div class="clear"></div>
 
 
+<div class="col-xs-10 col-xs-offset-1">
+  <h1 class="pull-left">Comments</h1>
+  <!-- Button trigger modal "Add a comment" -->
+  <button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#Comments">
+    Add a comment
+  </button>
+</div>
+
+<div class="clear"></div>
+
 <!-- Comments Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="Comments" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -68,10 +80,33 @@ function initMap() {
 </div>
 <!-- End of Comments Modal -->
 
+<!-- Show Comments -->
+<% @place.comments.each do |comment| %>
+  <div class="col-xs-12 col-sm-6">
+    <blockquote>
+      <% if comment.humanized_rating.present? %>  
+        <b><%= comment.humanized_rating %></b> -
+      <% end %>
+      <%= comment.message %>
+      <small><%= comment.user.email %></small>
+    </blockquote>
+  </div>
+<% end %>
+<!-- EndShow Comments -->
 
+</br>
+
+
+
+<div class="col-xs-10 col-xs-offset-1">
+  <h1 class="pull-left">Photos</h1>
+</div>
+
+
+<div class="clear"></div>
 
 <!-- Photos Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="Photos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -93,34 +128,13 @@ function initMap() {
 </div>      
 <!-- End of Photos Modal -->
 
-
-
-<div class="col-xs-10 col-xs-offset-1">
-  <h1 class="pull-left">Comments</h1>
-  <!-- Button trigger modal -->
-  <button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
-    Add a comment
-  </button>
-</div>
-
-<div class="clear"></div>
-
-<% @place.comments.each do |comment| %>
-  <div class="col-xs-12 col-sm-6">
-    <blockquote>
-      <% if comment.humanized_rating.present? %>  
-        <b><%= comment.humanized_rating %></b> -
-      <% end %>
-      <%= comment.message %>
-      <small><%= comment.user.email %></small>
-    </blockquote>
-  </div>
-<% end %>
-
-<!-- Show Photos on Page-->
-<div class="booyah-box col-xs-10 col-xs-offset-1">
+<!-- Show Photos -->
 <% @place.photos.each do |photo| %>
-      <%= image_tag photo.picture %>
-      <%= photo.caption %>
+<div class="booyah-box col-xs-10 col-xs-offset-1">
+    <%= image_tag photo.picture %>
+    <%= photo.caption %>
 <% end %>
 </div>
+<!-- End Show Photos -->
+
+</br>
