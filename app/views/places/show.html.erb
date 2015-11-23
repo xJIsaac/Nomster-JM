@@ -130,11 +130,12 @@ function initMap() {
 
 <!-- Show Photos -->
 <% @place.photos.each do |photo| %>
-<div class="booyah-box col-xs-10 col-xs-offset-1">
+  <div class="booyah-box col-xs-10 col-xs-offset-1">
     <%= image_tag photo.picture %>
+    <br/><br/>
     <%= photo.caption %>
+  </div>
 <% end %>
-</div>
 <!-- End Show Photos -->
 
 </br>

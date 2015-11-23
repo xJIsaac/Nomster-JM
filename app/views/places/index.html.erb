@@ -12,6 +12,8 @@
 			<small><%= place.user.email %></small>
 		<% end %>
 
+
+		<!-- Show Index:Last Comment-->
 		<% if place.comments.present? %>
 			<div class="col-xs-12">
 		    <blockquote>
@@ -22,6 +24,14 @@
 		      <small><%= place.comments.last.user.email %></small>
 		    </blockquote>
 	  	</div>
-	  <% end %>	
+	  <% end %>
+
+
+	  <!-- Show Index:Last Photo-->
+	  <% if place.photos.present? %>
+			<%= image_tag place.photos.last.picture %>
+		<% end %>	
+
+
 	</div>
 <% end %>
