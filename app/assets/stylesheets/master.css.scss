@@ -18,6 +18,10 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 body {
 	background: url('/assets/swirl_pattern.png');
 	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;

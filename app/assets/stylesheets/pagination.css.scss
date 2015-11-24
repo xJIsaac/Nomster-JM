@@ -1,36 +1,31 @@
-.apple_pagination {
+.nomster_pagination {
 	background: none;
 	text-align: center;
 	font-size: 14px;
-	word-spacing: 5px;}
-.apple_pagination a, .apple_pagination span {
-	padding: 0.2em 0.4em;}
-.apple_pagination .disabled {
+	word-spacing: 4px;
+	cursor: default;}
+.nomster_pagination a, .nomster_pagination span {
+	padding: 0.2em 1.5em;
+	display: inline-block;}
+.nomster_pagination .disabled {
 	color: #aaaaaa;
 	border-radius: 0.25em;
-	border-style: solid;
-	border-color: #FF5D5C;
-	border-width: 2px;
 	background-color: #363636;}
-.apple_pagination .current {
+.nomster_pagination .current {
 	font-style: normal;
 	font-weight: bold;
 	color: #white;
-	background-color: #FF5D5C;
-	padding: 0.2em 0.4em;
+	background-color: #ff5d5c;
+	padding: 0.2em 1.5em;
 	line-height: 1.5;
-  border-radius: 0.25em;
-  border-color: #FF5D5C;
-  border-style: solid;
-	border-width: 2px;}
-.apple_pagination a {
+	border-radius: 0.25em;
+	border-style: solid;
+	border-color: #363636;}
+.nomster_pagination a {
 	text-decoration: none;
 	color: white;
-  border-radius: 0.25em;
-	border-style: solid;
-	border-color: #FF5D5C;
-	border-width: 2px;
+  	border-radius: 0.25em;
 	background-color: #363636;}
-.apple_pagination a:hover, .apple_pagination a:focus {
+.nomster_pagination a:hover, .nomster_pagination a:focus {
 	background: #ff5d5c;
 	color: white;}
