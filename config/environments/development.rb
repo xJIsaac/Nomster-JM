@@ -11,7 +11,7 @@ Nomster::Application.configure do
     password: ENV['GMAIL_PASSWORD']
   }
 
-  # config.action_mailer.default_url_options = { :host => 'localhost:3030' }
+  config.action_mailer.default_url_options = { :host => 'localhost:3030' }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -26,8 +26,8 @@ Nomster::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  # Do care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
