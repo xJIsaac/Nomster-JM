@@ -1,6 +1,13 @@
 source 'https://rubygems.org'
 
-gem "fog", "~> 1.3.1"
+ruby '2.7.4' # Replace with your desired Ruby version
+
+
+gem 'fog', '~> 1.38'
+
+gem 'rack', '>= 2.2.4', '< 3.3.5'
+
+gem 'ovirt-engine-sdk', '~> 4.0', '>= 4.0.6'
 
 gem 'carrierwave'
 
@@ -10,7 +17,7 @@ gem "geocoder"
 
 gem 'devise', '>= 3.2.4'
 
-gem 'sprockets', '2.11.0'
+gem 'sprockets', '~> 4.0'
 
 gem 'simple_form'
 
@@ -18,10 +25,10 @@ gem 'simple_form'
 gem 'will_paginate', '~> 3.0.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
+gem 'rails', '7.0.7.2'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', '~> 1.5', '>= 1.5.4'
 
 # 
 gem 'bootstrap-sass', '~> 3.3.5.1'
@@ -33,7 +40,7 @@ gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 5.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -46,6 +53,10 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+gem 'json', '~> 2.5', '>= 2.5.1'
+
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
