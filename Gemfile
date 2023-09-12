@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.7.4' # Replace with your desired Ruby version
+ruby '3.2.2' # Replace with your desired Ruby version
 
 
 gem 'fog', '~> 1.38'
