@@ -3,11 +3,9 @@ source 'https://rubygems.org'
 ruby '3.2.2' # Replace with your desired Ruby version
 
 
-gem 'fog', '~> 1.38'
+gem 'fog-aws', '~> 3.19'
 
 gem 'rack', '>= 2.2.4', '< 3.3.5'
-
-gem 'ovirt-engine-sdk', '~> 4.0', '>= 4.0.6'
 
 gem 'carrierwave'
 
